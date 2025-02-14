@@ -1,0 +1,66 @@
+@import "../../variables.less";
+
+.homepage {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 176px 92px;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "middle"
+    "left"
+    "right";
+
+  .sensor{
+    width: 92px;
+    height: 92px;
+    background-color: @sensor-bg-color;
+    border-radius: 8px;
+    .box-shadow-1;
+  }
+  .group{
+    display: flex;
+    flex-flow: row;
+    gap: 36px;
+    margin: auto;
+
+    &.one{
+      grid-area: left;
+    }
+    &.two{
+      grid-area: right;
+      margin-bottom: 84px;
+    }
+  }
+
+  .arbolino{
+    grid-area: middle;
+    width: 240px;
+    height: 404px;
+    background-color: @sensor-bg-color;
+    border-radius: 8px;
+    .box-shadow-1;
+    margin: auto;
+    margin-top: 36px;
+  }
+}
+
+@media (min-width: 992px) {
+  .homepage {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "el left middle right er";
+    margin-top: 36px;
+
+    .group{
+      display: flex;
+      flex-flow: column;
+      &.two{
+        margin-bottom: 0;
+      }
+    }
+    .sensor{
+      width: 132px;
+      height: 132px;
+    }
+  }
+}

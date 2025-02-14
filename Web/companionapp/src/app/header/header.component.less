@@ -1,0 +1,44 @@
+@import "../../variables.less";
+
+header{
+  background-color: @header-bg-color;
+  height: @header-height;
+  @font-size: 2em;
+  h1{
+    position: absolute;
+    width: 300px;
+    left: calc(50% - 150px);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: @font-size;
+    line-height:  @font-size;
+    color: @logo-text-color;
+    background-color: @logo-text-stroke;
+    border-radius: @font-size;
+    padding: 0 calc(@font-size/2);
+    box-sizing: border-box;
+  }
+  ul{
+    display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  @font-size: 0.5em;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  @font-size: 0.5em;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  @font-size: 2em;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  @font-size: 2em;
+}
+
+@media (min-width: 1200px) {
+  @font-size: 2em;
+}
+
